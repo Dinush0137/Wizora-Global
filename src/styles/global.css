@@ -1,0 +1,315 @@
+@import './tokens.css';
+
+/* Modern Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 16px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  line-height: 1.65;
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Accessible Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  background: var(--brand-blue);
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  text-decoration: none;
+  transition: top var(--transition-fast);
+  box-shadow: var(--shadow-button-primary);
+}
+
+.skip-link:focus {
+  top: 16px;
+  outline: 2px solid var(--brand-navy);
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: var(--fs-hero);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+}
+
+/* Paragraphs with crisp, readable dark text */
+p {
+  color: var(--text-secondary);
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Highlighted Accent Text */
+em {
+  font-style: normal;
+  color: var(--brand-blue);
+  display: inline-block;
+  font-weight: 800;
+}
+
+/* Focus Visible */
+:focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 3px;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  padding: var(--section-padding) 0;
+  position: relative;
+  z-index: 1;
+  background-color: var(--bg-primary);
+}
+
+.section-tint {
+  background: var(--bg-tint-section);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Eyebrow Label */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--brand-blue-dark);
+  margin-bottom: var(--space-3);
+}
+
+.eyebrow-line {
+  width: 16px;
+  height: 2px;
+  background: var(--brand-blue);
+  border-radius: var(--radius-full);
+  display: inline-block;
+}
+
+/* Section Heading Component */
+.section-heading {
+  max-width: 680px;
+  margin-bottom: var(--space-10);
+}
+
+.section-heading.centered {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-heading.centered .eyebrow {
+  justify-content: center;
+}
+
+.section-heading h2 {
+  margin-bottom: var(--space-3);
+  color: var(--text-primary);
+}
+
+.section-heading p:not(.eyebrow) {
+  font-size: var(--fs-body-lg);
+  color: var(--text-secondary);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: var(--fs-body);
+  font-weight: 700;
+  border: 1px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  position: relative;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.button-primary {
+  background: var(--brand-blue);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-button-primary);
+}
+
+.button-primary:hover {
+  background: var(--brand-blue-dark);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-button-hover);
+}
+
+.button-outline {
+  background: #FFFFFF;
+  border: 1.5px solid #CBDFF5;
+  color: var(--brand-blue-dark);
+  font-weight: 700;
+}
+
+.button-outline:hover {
+  background: var(--brand-blue-light);
+  border-color: var(--brand-blue);
+  color: var(--brand-blue-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-subtle);
+}
+
+.button-whatsapp {
+  background: #FFFFFF;
+  border: 1.5px solid #8CB8FB;
+  color: var(--brand-blue-dark);
+  font-weight: 700;
+}
+
+.button-whatsapp:hover {
+  background: #F4F9FF;
+  border-color: var(--brand-blue);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-subtle);
+}
+
+.button-small {
+  padding: 8px 18px;
+  font-size: var(--fs-sm);
+  border-radius: var(--radius-sm);
+}
+
+/* Scroll Reveal States */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Make Hero instantly visible by default */
+.hero-section .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal.is-revealed,
+.is-revealed .reveal,
+.is-revealed.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Gentle Animations */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.08); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Accessibility: Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

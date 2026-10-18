@@ -1,0 +1,60 @@
+.hero-graphic-vector-stage {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-graphic-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 15px 30px rgba(5, 43, 96, 0.08));
+}
+
+/* Animations */
+.orbit-rotate-1 {
+  animation: spinSlow 60s linear infinite;
+  transform-origin: 340px 240px;
+}
+
+.orbit-rotate-2 {
+  animation: spinSlow 80s linear infinite reverse;
+  transform-origin: 340px 240px;
+}
+
+.floating-cloud-node {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+.laptop-interactive-group {
+  transition: transform var(--transition-normal);
+}
+
+.laptop-interactive-group:hover {
+  transform: translate(45px, 105px) scale(1.02);
+}
+
+.pcb-interactive-group {
+  transition: transform var(--transition-normal);
+}
+
+.pcb-interactive-group:hover {
+  transform: translate(230px, 235px) scale(1.03);
+}
+
+.router-interactive-group {
+  transition: transform var(--transition-normal);
+}
+
+.router-interactive-group:hover {
+  transform: translate(435px, 135px) scale(1.02);
+}
+
+@media (max-width: 640px) {
+  .hero-graphic-vector-stage {
+    max-width: 100%;
+  }
+}

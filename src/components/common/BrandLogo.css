@@ -1,0 +1,95 @@
+.brand-logo-component {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  user-select: none;
+}
+
+.brand-logo-img {
+  height: 42px;
+  width: auto;
+  max-width: 175px;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+
+.brand-logo-component:hover .brand-logo-img {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.size-small .brand-logo-img {
+  height: 32px;
+  max-width: 135px;
+}
+
+.brand-mark-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.brand-logo-component:hover .brand-mark-box {
+  transform: translateY(-1px) scale(1.04);
+}
+
+.brand-mark-svg {
+  width: 38px;
+  height: 40px;
+  display: block;
+}
+
+.size-small .brand-mark-svg {
+  width: 28px;
+  height: 30px;
+}
+
+.brand-text-wrap {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.brand-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  transition: color var(--transition-fast);
+}
+
+.brand-light .brand-title {
+  color: var(--brand-navy);
+}
+
+.brand-dark .brand-title {
+  color: #FFFFFF;
+}
+
+.brand-tagline {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-top: 3px;
+}
+
+.brand-light .brand-tagline {
+  color: var(--text-muted);
+}
+
+.brand-dark .brand-tagline {
+  color: #A9BFD9;
+}
+
+@media (max-width: 480px) {
+  .brand-title {
+    font-size: 1rem;
+  }
+  .brand-tagline {
+    font-size: 0.58rem;
+  }
+}

@@ -1,0 +1,112 @@
+/**
+ * Wizora Global - Responsive React Web Application
+ * Design System Tokens:
+ * Primary Background: #FFFFFF
+ * Header: #FFFFFF
+ * Layered Elements: #FFFFFF & #052B60
+ * High-Contrast Dark Text for maximum clarity and readability
+ */
+
+:root {
+  /* Color Palette - Backgrounds */
+  --bg-primary: #FFFFFF;
+  --bg-header: #FFFFFF;
+  --bg-secondary: #F6FAFE;
+  --bg-tertiary: #EDF6FF;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-surface-interactive: #F8FAFD;
+  --bg-tint-section: linear-gradient(135deg, #F4F9FF 0%, #FFFFFF 48%, #EDF6FF 100%);
+  --bg-layered-navy: #052B60;
+  --bg-navy-deep: #031B3E;
+
+  /* Brand Accents */
+  --brand-blue: #1769F5;
+  --brand-blue-dark: #0E55D8;
+  --brand-blue-light: #EAF4FF;
+  --brand-cyan: #00B4D8;
+  --brand-cyan-muted: rgba(0, 180, 216, 0.14);
+  --brand-navy: #052B60;
+  --brand-navy-deep: #02142E;
+  --brand-green: #10A968;
+  --brand-green-hover: #0C8E56;
+  --brand-green-glow: rgba(16, 169, 104, 0.35);
+
+  /* Gradients */
+  --gradient-brand: linear-gradient(135deg, #1769F5 0%, #0E55D8 100%);
+  --gradient-brand-subtle: linear-gradient(135deg, rgba(23, 105, 245, 0.08) 0%, rgba(0, 180, 216, 0.08) 100%);
+  --gradient-hero: linear-gradient(125deg, #F4F9FF 0%, #FFFFFF 48%, #EDF6FF 100%);
+  --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #F9FBFE 100%);
+  --gradient-footer: linear-gradient(115deg, #052B60 0%, #02142E 100%);
+
+  /* Borders & Dividers */
+  --border-subtle: #D8E5F3;
+  --border-medium: #B8D4F1;
+  --border-accent: #1769F5;
+  --border-accent-light: #70A9F5;
+
+  /* Typography Colors - High-Contrast Dark Text */
+  --text-primary: #052B60;        /* Deep Navy for Headings */
+  --text-secondary: #0F172A;      /* Rich Dark Slate-Black for Body Paragraphs - WCAG AAA */
+  --text-body: #1E293B;           /* Crisp Readable Slate */
+  --text-muted: #334155;          /* Solid Dark Slate for Subtexts/Labels - Never washed out */
+  --text-accent: #0E55D8;         /* Deep Royal Blue */
+  --text-inverse: #FFFFFF;        /* Pure White on Dark */
+  --text-footer: #F1F6FC;         /* High-contrast crisp off-white for footer */
+  --text-footer-muted: #CBDDF2;   /* Legible light blue for footer subtext */
+
+  /* Typography Families */
+  --font-heading: 'Manrope', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Font Scales */
+  --fs-hero: clamp(2.2rem, 4.4vw, 3.4rem);
+  --fs-h2: clamp(1.75rem, 3vw, 2.35rem);
+  --fs-h3: clamp(1.2rem, 1.8vw, 1.45rem);
+  --fs-h4: clamp(1rem, 1.3vw, 1.15rem);
+  --fs-body-lg: 1.0625rem;
+  --fs-body: 0.95rem;
+  --fs-sm: 0.85rem;
+  --fs-xs: 0.75rem;
+
+  /* Shadows */
+  --shadow-subtle: 0 4px 15px rgba(5, 43, 96, 0.05);
+  --shadow-card: 0 10px 30px rgba(5, 43, 96, 0.07);
+  --shadow-elevated: 0 18px 45px rgba(5, 43, 96, 0.12);
+  --shadow-button-primary: 0 6px 18px rgba(23, 105, 245, 0.28);
+  --shadow-button-hover: 0 10px 24px rgba(23, 105, 245, 0.38);
+
+  /* Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* Border Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Layout */
+  --backdrop-blur: blur(16px);
+  --header-height: 78px;
+  --container-max-width: 1180px;
+  --container-padding: clamp(16px, 4vw, 32px);
+  --section-padding: clamp(60px, 7vw, 90px);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
